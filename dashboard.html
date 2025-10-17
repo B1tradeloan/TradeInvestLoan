@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Dashboard | B1 Trade Loan</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo">B1<span>TradeLoan</span></div>
+    <nav class="nav-links">
+      <a href="pay.html">Membership Payment</a>
+      <a href="#" id="logoutBtn">Logout</a>
+    </nav>
+  </header>
+
+  <section class="dashboard fade-in">
+    <h1>Welcome Back</h1>
+    <p class="subtitle">Account: <span id="userNumberLabel"></span></p>
+    <div class="balance-card">
+      <h3>Wallet Balance</h3>
+      <p id="userBalance">₱0</p>
+    </div>
+
+    <div class="upload-proof">
+      <h3>Upload Payment Proof</h3>
+      <form id="proofUploadForm">
+        <input type="file" id="proofFile" accept="image/*" required />
+        <div id="proofPreview" class="proof-preview"></div>
+        <button type="submit" class="btn-primary">Submit Proof</button>
+      </form>
+    </div>
+  </section>
+
+  <div id="toast" class="toast"></div>
+
+  <footer class="footer">
+    <p>© 2025 B1 Trade Loan</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
