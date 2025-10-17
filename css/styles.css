@@ -1,0 +1,365 @@
+/* ==============================
+   B1 TRADE LOAN – Corporate Styling
+   ============================== */
+
+:root {
+  --royal-blue: #0b63d6;
+  --sky-blue: #39a6ff;
+  --white: #ffffff;
+  --gray: #f6f8fb;
+  --text-dark: #1c1c1c;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --radius: 10px;
+}
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Inter, sans-serif;
+  background-color: var(--white);
+  color: var(--text-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Header */
+.main-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(90deg, var(--royal-blue), var(--sky-blue));
+  color: var(--white);
+  padding: 15px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  box-shadow: 0 2px 10px var(--shadow);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: var(--white);
+  font-weight: 400;
+}
+
+.nav-links a {
+  color: var(--white);
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+  opacity: 0.8;
+}
+
+/* Hero Sections */
+.hero-section {
+  text-align: center;
+  padding: 100px 10% 60px;
+  background: linear-gradient(to bottom, var(--white), var(--gray));
+}
+
+.hero-section h1 {
+  font-size: 2.2rem;
+  color: var(--royal-blue);
+  margin-bottom: 10px;
+}
+
+.hero-section span {
+  color: var(--sky-blue);
+}
+
+.hero-section p {
+  color: #555;
+}
+
+/* Login / Form Sections */
+.login-section,
+.form-section {
+  padding: 60px 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container,
+.feedback-form,
+.contact-form {
+  background: var(--white);
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: 0 5px 20px var(--shadow);
+  width: 100%;
+  max-width: 420px;
+  animation: fadeIn 1s ease;
+}
+
+.login-container h2 {
+  text-align: center;
+  color: var(--royal-blue);
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.login-form label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: var(--radius);
+  outline: none;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  font-size: 0.95rem;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--royal-blue);
+  box-shadow: 0 0 5px var(--sky-blue);
+}
+
+textarea {
+  resize: none;
+  min-height: 100px;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 12px;
+  border: none;
+  border-radius: var(--radius);
+  color: var(--white);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background: var(--royal-blue);
+}
+
+.btn-primary:hover {
+  background: var(--sky-blue);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: var(--sky-blue);
+  margin-top: 10px;
+}
+
+.btn-secondary:hover {
+  background: var(--royal-blue);
+}
+
+/* Membership area */
+.membership {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Toast Notifications */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--sky-blue);
+  color: var(--white);
+  padding: 14px 18px;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px var(--shadow);
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  z-index: 9999;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* About Section */
+.about-section {
+  padding: 60px 10%;
+  max-width: 800px;
+  margin: auto;
+}
+
+.about-section h2 {
+  color: var(--royal-blue);
+  margin-bottom: 10px;
+}
+
+.about-section p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.about-section ul {
+  list-style: disc;
+  margin-left: 20px;
+  color: #444;
+}
+
+/* Contact Info Cards */
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 10%;
+}
+
+.info-box {
+  background: var(--white);
+  padding: 25px;
+  border-radius: var(--radius);
+  box-shadow: 0 5px 15px var(--shadow);
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+}
+
+.info-box h3 {
+  color: var(--royal-blue);
+  margin-bottom: 10px;
+}
+
+/* Dashboard */
+.dashboard {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.proofs-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.proof-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: 0 5px 20px var(--shadow);
+  padding: 20px;
+  width: 280px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.proof-card:hover {
+  transform: translateY(-5px);
+}
+
+.proof-card img {
+  width: 100%;
+  border-radius: var(--radius);
+  margin-bottom: 10px;
+}
+
+.proof-card button {
+  background: var(--royal-blue);
+  color: var(--white);
+  border: none;
+  padding: 10px 15px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.proof-card button:hover {
+  background: var(--sky-blue);
+}
+
+.no-proof {
+  margin-top: 40px;
+  font-style: italic;
+  color: #777;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 30px 10%;
+  background: var(--gray);
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .login-container,
+  .feedback-form,
+  .contact-form {
+    max-width: 90%;
+  }
+
+  .proofs-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
