@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B1 Trade Loan | Login</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="logo">B1<span>TradeLoan</span></div>
+    <nav class="nav-links">
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="admin.html" class="admin-link">Admin</a>
+    </nav>
+  </header>
+
+  <!-- Login Section -->
+  <section class="login-section">
+    <div class="login-container fade-in">
+      <h2>Welcome to <span>B1 Trade Loan</span></h2>
+      <p class="subtitle">Login to continue to your account</p>
+
+      <form id="loginForm" class="login-form">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="Enter phone number" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter password" required>
+
+        <button type="submit" class="btn-primary">Login</button>
+
+        <div class="membership">
+          <p>Haven’t paid your membership?</p>
+          <a href="https://b1tradeloan.github.io/TradeInvestLoan/IMG_9339.jpeg" target="_blank" class="btn-secondary">
+            Pay Membership
+          </a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast"></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
