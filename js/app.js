@@ -183,3 +183,51 @@ if (proofsContainer) {
 
   renderProofs();
 }
+/* ===============================
+   USER DASHBOARD
+   =============================== */
+const dashboard = document.getElementById("proofUploadForm");
+if (dashboard) {
+  const userNum = localStorage.getItem("b1_user_number") || "Unknown";
+  const label = document.getElementById("userNumberLabel");
+  if (label) label.textContent = userNum;
+
+  const preview = document.getElementById("proofPreview");
+  const fileInput = document.getElementById("proofFile");
+  const balanceEl = document.getElementById("userBalance");
+
+  let balance = parseInt(localStorage.getItem("b1_balance") || "0");
+
+  balanceEl.textContent = "₱" + balance.toLocaleString();
+
+  fileInput.addEventListener("change", e => {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function(evt) {
+      preview.innerHTML = `<img src="${evt.target.result}" alt="Proof Preview">`;
+      showToast("Proof preview ready.");
+    };
+    reader.readAsDataURL(file);
+  });
+
+  dashboard.addEventListener("submit", e => {
+    e.preventDefault();
+    if (!fileInput.files[0]) {
+      showToast("Please upload a proof image first.");
+      return;
+    }
+    showToast("Proof submitted — pending admin verification.");
+    preview.innerHTML = "";
+    fileInput.value = "";
+  });
+
+  const logoutBtn = document.getElementById("logoutBtn");
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", () => {
+      localStorage.clear();
+      showToast("Logged out.");
+      setTimeout(() => (window.location.href = "index.html"), 800);
+    });
+  }
+}
