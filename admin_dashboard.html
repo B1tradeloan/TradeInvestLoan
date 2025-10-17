@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | B1 Trade Loan</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="logo">B1<span>TradeLoan</span></div>
+    <nav class="nav-links">
+      <a href="index.html">Logout</a>
+    </nav>
+  </header>
+
+  <!-- Dashboard -->
+  <section class="dashboard fade-in">
+    <h1>Admin Dashboard</h1>
+    <p class="subtitle">Welcome, <strong>09264068522</strong> — manage membership verifications below.</p>
+
+    <!-- Pending Proofs -->
+    <div class="proofs-container" id="proofsContainer">
+      <!-- Proof cards are dynamically loaded here by app.js -->
+    </div>
+
+    <!-- No Pending Notice -->
+    <div class="no-proof" id="noProof">
+      <p>No pending verifications.</p>
+    </div>
+  </section>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 B1 Trade Loan. Admin Control Panel</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
