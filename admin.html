@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin Login | B1 Trade Loan</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="main-header">
+    <div class="logo">B1<span>TradeLoan</span></div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="feedback.html">Feedback</a>
+    </nav>
+  </header>
+
+  <!-- Admin Login Section -->
+  <section class="login-section fade-in">
+    <div class="login-container admin-panel">
+      <h2>Administrator Access</h2>
+      <p class="subtitle">Restricted area — authorized personnel only</p>
+
+      <form id="adminLoginForm" class="login-form">
+        <label for="adminUser">Admin Phone Number</label>
+        <input type="tel" id="adminUser" placeholder="e.g. 09XXXXXXXXX" required>
+
+        <label for="adminPass">Password</label>
+        <input type="password" id="adminPass" placeholder="Enter admin password" required>
+
+        <button type="submit" class="btn-primary">Login</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Toast -->
+  <div id="toast" class="toast"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 B1 Trade Loan. Admin Portal</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
